@@ -9,10 +9,10 @@ function Band(props){
 
     return (
         <div className="band">
-            <h2>{band_name}</h2>
-            <h3>{formed}</h3>
-            <small><strong>{origin}</strong></small>
-            <small>{fans}</small>
+            <h2>{band_name}: {formed}</h2>
+            <p><strong>{origin}</strong></p>
+            <p><small>{style}</small></p>
+            <p>Fans: {fans}</p>
             <p>
                 {split === '-' ? 
                     <span>Band is still together</span>
