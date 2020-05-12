@@ -2,3 +2,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+ul {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+    float: left;
+  }
