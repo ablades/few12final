@@ -5,9 +5,11 @@ import './Bands.css'
 
 function Bands() {
     let countries = []
-    const bands = data.map(({ID, origin}) =>{
-        countries[origin] = (countries[origin] || 0) + 1
-
+    const bands = data.map(({ID, origin, fans}) => {
+        countries[origin] = countries[origin] || (countries[origin] = [])
+        countries[origin][0] = (countries[origin][0] || 0) + 1
+        countries[origin][1] = (countries[origin][1] || 0) + fans
+        
         return (
         <Band ID={ID} />)
     })
@@ -16,7 +18,7 @@ function Bands() {
     const countriesList = []
 
     Object.entries(countries).map(([key,value]) => {
-        countriesList.push(<li>{key}: {value}</li>)
+    countriesList.push(<li>{key}: {value[0]} {value[1]}</li>)
     })
 
     return(
@@ -27,7 +29,7 @@ function Bands() {
             </ul>
 
             <h1># of Bands: {bands.length}</h1>
-            
+
             <div className="Bands">
             {bands}
             </div>
