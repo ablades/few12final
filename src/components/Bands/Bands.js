@@ -11,6 +11,7 @@ function Bands() {
 
     return(
         <div className="Bands">
+            <h1># of Bands: {bands.length}</h1>
             {bands}
         </div>
     )
