@@ -1,8 +1,8 @@
 import React from 'react'
-import data from './metal.json'
+import data from '../../metal.json'
 
 function Band(props){
-    const { ID } = props.match.params
+    const { ID } = props
     const { band_name, fans, formed, origin, split, style } = data[ID]
 
     return (
