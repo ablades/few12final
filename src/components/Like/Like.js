@@ -5,9 +5,11 @@ function Like() {
 
     return(
         <div className="like">
-            <button className="down" onClick={() => setCount(likeCount -= 1)}></button>
+            <button className="down" onClick={() => setCount(likeCount -= 1)}>-</button>
+
             {likeCount}
-            <button className="up" onClick={() => setCount(likeCount += 1)}></button>
+            
+            <button className="up" onClick={() => setCount(likeCount += 1)}>+</button>
         </div>
     )
 }

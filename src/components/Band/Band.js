@@ -12,6 +12,13 @@ function Band(props){
             <h3>{formed}</h3>
             <small><strong>{origin}</strong></small>
             <small>{fans}</small>
+            <p>
+                {split === '-' ? 
+                    <span>Band is still together</span>
+                    :
+                    <span>Band split in {split}</span>
+                }
+            </p>
             <Like />
 
         </div>
