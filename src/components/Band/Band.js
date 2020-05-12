@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '../../metal.json'
 import Like from '../Like/Like.js'
+import './Band.css'
 
 function Band(props){
     const { ID } = props
