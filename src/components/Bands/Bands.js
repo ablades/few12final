@@ -9,7 +9,7 @@ function Bands() {
         countries[origin] = countries[origin] || (countries[origin] = [])
         countries[origin][0] = (countries[origin][0] || 0) + 1
         countries[origin][1] = (countries[origin][1] || 0) + fans
-        
+
         return (
         <Band ID={ID} />)
     })
@@ -18,7 +18,13 @@ function Bands() {
     const countriesList = []
 
     Object.entries(countries).map(([key,value]) => {
-    countriesList.push(<li>{key}: {value[0]} {value[1]}</li>)
+        countriesList.push(
+            <li>
+                <h3>{key} </h3>
+                <p> # of Bands: {value[0]} </p>
+                <p># of Fans: {value[1]} </p>
+            </li>
+        )
     })
 
     return(
